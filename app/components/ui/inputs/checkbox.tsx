@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckIconSm } from "@/icons/icons";
+import { Check as CheckIconSm } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import * as React from "react";
 

@@ -22,12 +22,12 @@ export const BILLING_PLANS = [
     pricing: {
       monthly: {
         amount: AMOUNTS["starter"]["monthly"],
-        formattedPrice: "$" + AMOUNTS["starter"]["monthly"],
+        formattedPrice: "₦" + AMOUNTS["starter"]["monthly"],
         stripeId: null,
       },
       yearly: {
         amount: AMOUNTS["starter"]["yearly"],
-        formattedPrice: "$" + AMOUNTS["starter"]["yearly"],
+        formattedPrice: "₦" + AMOUNTS["starter"]["yearly"],
         stripeId: null,
       },
     },
@@ -48,18 +48,17 @@ export const BILLING_PLANS = [
     pricing: {
       monthly: {
         amount: AMOUNTS["growth"]["monthly"],
-        formattedPrice: "$" + AMOUNTS["growth"]["monthly"],
+        formattedPrice: "₦" + AMOUNTS["growth"]["monthly"],
         stripeId: process.env.NEXT_PUBLIC_GROWTH_MONTHLY_PRICE_ID!,
       },
       yearly: {
         amount: AMOUNTS["growth"]["yearly"],
-        formattedPrice: "$" + AMOUNTS["growth"]["yearly"],
+        formattedPrice: "₦" + AMOUNTS["growth"]["yearly"],
         stripeId: process.env.NEXT_PUBLIC_GROWTH_YEARLY_PRICE_ID!,
       },
     },
     features: [
       "Everything in Starter",
-      "Up to 100,000 Orders / month",
       "Multi-Branch Support",
       "Staff & Role Management",
       "Inventory Tracking",

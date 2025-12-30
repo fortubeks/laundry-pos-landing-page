@@ -9,7 +9,7 @@ const Clientsay = () => {
         </h3>
         <h4 className="text-lg font-normal text-darkgray text-center mt-4">
           Our clients love us! But {`don't`} just take our word for it - see
-          what
+          what they are saying.
         </h4>
 
         <div className="lg:relative">
