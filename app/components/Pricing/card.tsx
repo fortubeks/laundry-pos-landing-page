@@ -43,15 +43,18 @@ export function PricingCard({ plan }: Props) {
           </p>
 
           {plan.name.includes("Enterprise") ? (
-            <ContactSalesLink>{plan.cta}</ContactSalesLink>
+            <ContactSalesLink name={plan.name}>{plan.cta}</ContactSalesLink>
           ) : (
-            <button
-              className={
-                "block w-full px-8 py-3.5 mt-7 text-sm font-medium text-center rounded-full transition bg-secondary text-white"
-              }
+            <a
+              href={`https://wa.me/2349165426799?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20${encodeURIComponent(
+                plan.name
+              )}%20plan%20on%20laundryPos.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full px-8 py-3.5 mt-7 text-sm font-medium text-center rounded-full transition hover:bg-gray-900 bg-secondary text-white cursor-pointer z-10 relative"
             >
               {plan.cta}
-            </button>
+            </a>
           )}
         </div>
         <div className="px-8 pb-7">
@@ -70,19 +73,26 @@ export function PricingCard({ plan }: Props) {
       </div>
 
       {plan.popular && (
-        <GlowGradient className="absolute -left-full -translate-x-20 top-0 max-lg:hidden" />
+        <GlowGradient className="absolute z-[1] -left-full -translate-x-20 top-0 max-lg:hidden" />
       )}
     </div>
   );
 }
 
-function ContactSalesLink({ children }: PropsWithChildren) {
+function ContactSalesLink({
+  children,
+  name,
+}: PropsWithChildren<{ name: string }>) {
   return (
-    <Link
-      href="/contact"
-      className="block w-full px-8 py-3.5 mt-7 text-sm font-medium text-center rounded-full transition hover:bg-gray-900 text-white bg-primary"
+    <a
+      href={`https://wa.me/2349165426799?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20${encodeURIComponent(
+        name
+      )}%20plan%20on%20laundryPos.`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block w-full px-8 py-3.5 mt-7 text-sm font-medium text-center rounded-full transition hover:bg-gray-900 text-white bg-primary cursor-pointer"
     >
       {children}
-    </Link>
+    </a>
   );
 }

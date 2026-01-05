@@ -1,12 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import { BILLING_PLANS } from "./data";
 import { PricingCard } from "./card";
 
 export default function PricingSection() {
   return (
-    <section className="py-14 md:py-30" id="pricing">
+    <section className="px-5 py-14 md:py-30" id="pricing">
       <div className="wrapper">
         <div className="max-w-2xl mx-auto mb-12 text-center">
           <h2 className="mb-5 leading-normal font-bold text-center text-gray-800 text-3xl md:text-6xl">

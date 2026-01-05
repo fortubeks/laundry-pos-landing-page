@@ -1,8 +1,48 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 const Newsletter = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    try {
+      const brevoUrl = process.env.NEXT_PUBLIC_BREVO_URL;
+      
+      if (!brevoUrl) {
+        toast.error("Newsletter service not configured");
+        setLoading(false);
+        return;
+      }
+
+      const apiKey = process.env.NEXT_PUBLIC_BREVO_API_KEY || "";
+      const response = await fetch(brevoUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": apiKey,
+        },
+        body: JSON.stringify({
+          email: email,
+        }),
+      });
+      const data = await response.json();
+      console.log(data);
+      setEmail("");
+      toast.success("Thanks for subscribing to our newsletter!");
+    } catch (err) {
+      console.log(err);
+      toast.error("Something went wrong, please try again later");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="-mt-32 relative z-3">
+    <div className="-mt-34 relative z-3">
       <div className="mx-auto max-w-2xl lg:max-w-7xl bg-blue-500 rounded-3xl">
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 lg:grid-cols-2 xl:gap-x-8">
           {/* COLUMN-1 */}
@@ -48,14 +88,23 @@ const Newsletter = () => {
                 className="py-4 text-sm w-full text-black bg-white rounded-l-lg pl-4"
                 placeholder="@enter email address"
                 autoComplete="off"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="bg-midblue text-white font-medium py-2 px-4 rounded-r-lg">
-                <Image
-                  src={"/assets/newsletter/plane.svg"}
-                  alt="plane-img"
-                  width={20}
-                  height={20}
-                />
+              <button
+                className="bg-midblue text-white font-medium py-2 px-4 rounded-r-lg"
+                onClick={handleSubmit}
+              >
+                {loading ? (
+                  <span className="inline-block h-5 w-5 rounded-full border-2 border-gray-300 border-t-blue-600 animate-spin"></span>
+                ) : (
+                  <Image
+                    src={"/assets/newsletter/plane.svg"}
+                    alt="plane-img"
+                    width={20}
+                    height={20}
+                  />
+                )}
               </button>
             </div>
           </div>
