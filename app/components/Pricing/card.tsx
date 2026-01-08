@@ -51,7 +51,7 @@ export function PricingCard({ plan }: Props) {
               )}%20plan%20on%20laundryPos.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full px-8 py-3.5 mt-7 text-sm font-medium text-center rounded-full transition hover:bg-gray-900 bg-secondary text-white cursor-pointer z-10 relative"
+              className="block w-full px-8 py-3.5 mt-7 text-sm font-medium text-center rounded-full transition hover:bg-gray-900 bg-secondary text-white cursor-pointer z-[2] relative"
             >
               {plan.cta}
             </a>

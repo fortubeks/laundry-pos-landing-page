@@ -7,6 +7,46 @@ import { Toaster } from "react-hot-toast";
 export const metadata = {
   title: "My Laundry Point of Sale",
   description: "Powerful Laundry POS Software for Smarter, Faster Business",
+
+  metadataBase: new URL("https://mylaundrypos.com"),
+
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: "/icon.png",
+  },
+
+  openGraph: {
+    title: "My Laundry Point of Sale",
+    description: "Powerful Laundry POS Software for Smarter, Faster Business",
+    url: "https://mylaundrypos.com",
+    siteName: "My Laundry Point of Sale",
+    images: [
+      {
+        url: "/icon.png",
+        width: 1200,
+        height: 630,
+        alt: "My Laundry POS",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

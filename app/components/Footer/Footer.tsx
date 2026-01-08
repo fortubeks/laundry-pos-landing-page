@@ -127,7 +127,7 @@ const footer = () => {
                 height={24}
               />
               <h5 className="text-base font-normal text-offwhite">
-                info@mylaundrypos.com
+                info@fortranhouse.com
               </h5>
             </div>
           </div>

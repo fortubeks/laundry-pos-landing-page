@@ -28,7 +28,7 @@ const Why = () => {
           {/* COLUMN-1 */}
           <div className="lg:-ml-64">
             <Image
-              src="/assets/why/iPad.png"
+              src="/assets/why/iPad2.png"
               alt="iPad-image"
               width={4000}
               height={900}

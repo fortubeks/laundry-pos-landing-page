@@ -14,7 +14,7 @@ const Clientsay = () => {
 
         <div className="lg:relative">
           <Image
-            src={"/assets/clientsay/avatars.png"}
+            src={"/assets/clientsay/avatars2.png"}
             alt="avatar-image"
             width={1061}
             height={733}
@@ -23,7 +23,7 @@ const Clientsay = () => {
 
           <span className="lg:absolute lg:bottom-40 lg:left-80">
             <Image
-              src={"/assets/clientsay/user.png"}
+              src={"/assets/clientsay/user2.png"}
               alt="user-image"
               width={168}
               height={168}
