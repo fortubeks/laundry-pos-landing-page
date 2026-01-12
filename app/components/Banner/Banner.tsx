@@ -1,5 +1,6 @@
 import Image from "next/image";
 import bannerImage from "../../../public/assets/banner/dashboard.png";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -36,6 +37,20 @@ const Banner = () => {
             alt="banner-image"
             className="md:w-2/3 shadow-lg mx-auto rounded-lg"
           />
+          <div className="flex items-center gap-5 w-fit mx-auto">
+            <Link
+              href="https://app.mylaundrypos.com/login"
+              className="bg-white w-full text-blue border border-lightblue font-medium py-2 px-4 rounded flex justify-center items-center"
+            >
+              Sign In
+            </Link>
+            <Link
+              href="https://app.mylaundrypos.com/register"
+              className="bg-lightblue w-full min-w-fit hover:bg-blue hover:text-white text-blue font-medium my-2 py-2 px-4 rounded flex justify-center items-center"
+            >
+              Sign up
+            </Link>
+          </div>
         </div>
       </div>
     </main>
