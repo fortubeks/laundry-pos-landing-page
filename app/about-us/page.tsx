@@ -1,0 +1,314 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "My Laundry POS, the leading laundry software and laundry management software that helps businesses streamline operations and grow revenue. Get started today.",
+  alternates: {
+    canonical: "/about-us",
+  },
+  openGraph: {
+    title: "About Us",
+    description:
+      "My Laundry POS, the leading laundry software and laundry management software that helps businesses streamline operations and grow revenue. Get started today.",
+    url: "https://mylaundrypos.com/about-us",
+    siteName: "My Laundry Point of Sale",
+    type: "website",
+  },
+};
+
+const industryChallenges = [
+  "Misplaced or mismatched clothes due to manual tracking.",
+  "Inconsistent order management and delayed deliveries.",
+  "Limited visibility into revenue and staff performance.",
+  "Difficulty managing multiple branches from one system.",
+];
+
+const corePrinciples = [
+  {
+    title: "Industry Innovation",
+    description:
+      "My Laundry POS is not generic software. It is purpose-built for laundry and dry-cleaning businesses, so every feature supports real operational workflows.",
+  },
+  {
+    title: "Operational Simplicity Through Automation",
+    description:
+      "The platform simplifies complex daily activities by automating order tracking, billing, and activity management, replacing manual processes with efficient digital workflows.",
+  },
+  {
+    title: "Growth Driven Technology",
+    description:
+      "My Laundry POS positions laundry software as a growth engine that helps owners improve turnaround time, enhance customer service, and maximize revenue opportunities.",
+  },
+  {
+    title: "Scalability For Every Business Size",
+    description:
+      "From premium single-location cleaners to multi-branch enterprises, this laundry management software scales seamlessly as operations expand.",
+  },
+  {
+    title: "Reliability And Business Control",
+    description:
+      "As dependable commercial laundry software, My Laundry POS delivers visibility, accountability, and data-driven decision making for long-term success.",
+  },
+];
+
+const problemsSolved = [
+  {
+    title: "Disorganized Orders",
+    description:
+      "Manual records and disconnected tools often lead to mismatched clothes, delays, and customer dissatisfaction. My Laundry POS introduces structured digital tracking from intake to delivery.",
+  },
+  {
+    title: "Limited Business Control",
+    description:
+      "Owners often struggle to monitor staff performance, branch activities, and daily revenue accurately. Our centralized dashboards and reports provide clear oversight for smarter planning.",
+  },
+  {
+    title: "Revenue Leakage",
+    description:
+      "Manual billing and inconsistent pricing create income loss. My Laundry POS automates billing, payment tracking, and analytics to improve transaction accuracy and profitability.",
+  },
+];
+
+const uniqueFeatures = [
+  "Unlimited Orders",
+  "Advanced Custom Reports and Analytics",
+  "Multi Branch Support",
+  "Staff and Role Management",
+  "Inventory Tracking",
+  "Automated SMS and WhatsApp Alerts",
+  "API Integration",
+  "Dedicated Account Manager",
+];
+
+const audienceGroups = [
+  "Multi-branch laundry and dry-cleaning businesses managing high order volumes.",
+  "Large commercial and industrial laundries that require automation and reporting.",
+  "Premium single-location dry cleaners focused on modern customer experiences.",
+  "Established laundry business owners ready to scale profitably.",
+];
+
+export default function AboutUsPage() {
+  return (
+    <main className="bg-white">
+      <section className="relative overflow-hidden px-6 lg:px-8 pt-16 pb-16 sm:pt-20 sm:pb-20">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-lightblue/40 via-white to-white" />
+        <div className="absolute -top-24 -right-10 h-64 w-64 rounded-full bg-blue/10 blur-3xl -z-10" />
+        <div className="absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-babyblue blur-3xl -z-10" />
+
+        <div className="mx-auto max-w-7xl">
+          <p className="text-blue font-semibold tracking-wide uppercase text-sm">
+            About My Laundry POS
+          </p>
+          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold text-navyblue leading-tight max-w-4xl">
+            My Laundry POS - Built To Power Modern Laundry Businesses
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-bluegray max-w-4xl">
+            My Laundry POS is a purpose-built laundry POS designed to help
+            modern laundry and dry-cleaning businesses manage operations with
+            clarity and efficiency. Unlike generic platforms, My Laundry POS
+            delivers specialized laundry software created for real laundry
+            operations, from order processing to performance tracking.
+          </p>
+          <p className="mt-4 text-lg leading-8 text-bluegray max-w-4xl">
+            As advanced laundry management software and commercial laundry
+            software, it helps businesses control daily activities, automate
+            operations, and improve service delivery from a single platform. My
+            Laundry POS empowers owners and managers to streamline processes,
+            maintain full operational visibility, and build profit across
+            Nigeria and worldwide.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              href="https://app.mylaundrypos.com/register"
+              className="bg-blue hover:opacity-90 text-white font-medium py-3 px-6 rounded"
+            >
+              Get Started
+            </Link>
+            <Link
+              href="/contact-us"
+              className="bg-white text-blue border border-lightblue font-medium py-3 px-6 rounded"
+            >
+              Talk To Our Team
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 lg:px-8 py-14">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="lg:col-span-7 bg-white border border-lightblue rounded-2xl p-8 shadow-sm">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navyblue">
+              Our Story
+            </h2>
+            <p className="mt-4 text-bluegray leading-7">
+              My Laundry POS was created after recognizing the everyday
+              operational challenges faced by modern laundry and dry-cleaning
+              businesses. Many operators still rely on manual systems or generic
+              tools that do not support real laundry workflows.
+            </p>
+            <p className="mt-4 text-bluegray leading-7">
+              To solve this, My Laundry POS was developed as dedicated laundry
+              management software and scalable commercial laundry software for
+              the industry. The goal is simple: automate operations, improve
+              accountability, and support sustainable growth worldwide.
+            </p>
+          </div>
+
+          <div className="lg:col-span-5 bg-lightblue/40 rounded-2xl p-8">
+            <h3 className="text-2xl font-semibold text-navyblue">
+              Common Industry Challenges
+            </h3>
+            <ul className="mt-5 space-y-3">
+              {industryChallenges.map((challenge) => (
+                <li
+                  key={challenge}
+                  className="bg-white rounded-lg border border-lightblue px-4 py-3 text-bluegray"
+                >
+                  {challenge}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 lg:px-8 py-14 bg-slate-50">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-navyblue">
+            What My Laundry POS Stands For
+          </h2>
+          <p className="mt-4 text-bluegray max-w-4xl leading-7">
+            My Laundry POS is built on clear principles that help laundry
+            businesses operate smarter, grow faster, and maintain full
+            operational control.
+          </p>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {corePrinciples.map((principle, index) => (
+              <article
+                key={principle.title}
+                className="bg-white border border-lightblue rounded-xl p-6"
+              >
+                <p className="text-sm font-semibold text-blue">0{index + 1}</p>
+                <h3 className="mt-2 text-xl font-semibold text-navyblue">
+                  {principle.title}
+                </h3>
+                <p className="mt-3 text-bluegray leading-7">
+                  {principle.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 lg:px-8 py-14">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-navyblue">
+            The Problem We Solve For Laundry Businesses
+          </h2>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+            {problemsSolved.map((problem) => (
+              <article
+                key={problem.title}
+                className="rounded-xl border border-lightblue p-6 bg-white"
+              >
+                <h3 className="text-xl font-semibold text-navyblue">
+                  {problem.title}
+                </h3>
+                <p className="mt-3 text-bluegray leading-7">
+                  {problem.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 lg:px-8 py-14 bg-lightblue/25">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-navyblue">
+            Our Core Solution And Features
+          </h2>
+          <p className="mt-4 text-bluegray max-w-4xl leading-7">
+            My Laundry POS delivers an all-in-one ecosystem for managing every
+            activity from a centralized platform.
+          </p>
+
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {uniqueFeatures.map((feature) => (
+              <div
+                key={feature}
+                className="bg-white border border-lightblue rounded-lg px-4 py-5"
+              >
+                <p className="text-navyblue font-medium">{feature}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 lg:px-8 py-14">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navyblue">
+              Who We Serve
+            </h2>
+            <p className="mt-4 text-bluegray leading-7">
+              My Laundry POS is built for laundry businesses that want
+              efficiency, scalability, and operational control through
+              specialized software.
+            </p>
+            <ul className="mt-6 space-y-3">
+              {audienceGroups.map((group) => (
+                <li
+                  key={group}
+                  className="rounded-lg border border-lightblue px-4 py-3 text-bluegray"
+                >
+                  {group}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-darkblue rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white">
+              Why Laundry Businesses Trust My Laundry POS
+            </h2>
+            <p className="mt-4 text-offwhite leading-7">
+              Laundry businesses trust My Laundry POS because it delivers
+              reliable, industry-focused laundry software built for real
+              operational needs. As advanced laundry management software, it
+              provides automation, accuracy, and centralized visibility that
+              improve daily workflows.
+            </p>
+            <p className="mt-4 text-offwhite leading-7">
+              My Laundry POS combines scalable commercial laundry software with
+              ease of use, helping teams onboard quickly while maintaining
+              consistency. With continuous platform improvements and dedicated
+              support, businesses can reduce errors and grow with confidence.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="https://app.mylaundrypos.com/register"
+                className="bg-lightblue text-blue font-medium py-3 px-5 rounded"
+              >
+                Start Free Trial
+              </Link>
+              <Link
+                href="/contact-us"
+                className="border border-white/40 text-white font-medium py-3 px-5 rounded"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

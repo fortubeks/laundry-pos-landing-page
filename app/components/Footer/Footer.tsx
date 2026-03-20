@@ -13,11 +13,11 @@ const products: ProductType[] = [
     id: 1,
     link: [
       { name: "Home", href: "/", current: true },
-      { name: "Features", href: "#features", current: false },
-      { name: "About", href: "#about", current: false },
-      { name: "Pricing", href: "#pricing", current: false },
-      { name: "Screenshots", href: "#screenshots", current: false },
-      { name: "Contact", href: "#contact", current: false },
+      { name: "Features", href: "/#features", current: false },
+      { name: "About", href: "/about-us", current: false },
+      { name: "Pricing", href: "/#pricing", current: false },
+      { name: "Screenshots", href: "/#screenshots", current: false },
+      { name: "Contact", href: "/contact-us", current: false },
     ],
   },
   //   {
@@ -28,9 +28,9 @@ const products: ProductType[] = [
 
 const footer = () => {
   return (
-    <div className="bg-darkblue -mt-40">
-      <div className="mx-auto max-w-2xl pt-48 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div className="my-24 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
+    <div className="bg-darkblue">
+      <div className="mx-auto max-w-2xl pt-8 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="my-14 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
           {/* COLUMN-1 */}
 
           <div className="col-span-4 md:col-span-12 lg:col-span-4">
@@ -78,7 +78,7 @@ const footer = () => {
                 {product.link.map(
                   (
                     link: { name: string; href: string; current: boolean },
-                    index: number
+                    index: number,
                   ) => (
                     <li key={index} className="mb-5">
                       <Link
@@ -88,7 +88,7 @@ const footer = () => {
                         {link.name}
                       </Link>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>

@@ -16,10 +16,10 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: true },
-  { name: "Features", href: "#features", current: false },
-  { name: "About", href: "#about", current: false },
-  { name: "Pricing", href: "#pricing", current: false },
-  { name: "Contact", href: "#contact", current: false },
+  { name: "Features", href: "/#features", current: false },
+  { name: "About", href: "/about-us", current: false },
+  { name: "Pricing", href: "/#pricing", current: false },
+  { name: "Contact", href: "/contact-us", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -57,7 +57,7 @@ const Navbar = () => {
                         item.current
                           ? " text-black hover:opacity-100"
                           : "hover:text-black hover:opacity-100",
-                        "px-3 py-4 text-lg font-normal opacity-75 space-links"
+                        "px-3 py-4 text-lg font-normal opacity-75 space-links",
                       )}
                       aria-current={item.href ? "page" : undefined}
                     >

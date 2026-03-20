@@ -9,10 +9,10 @@ interface NavigationItem {
 
 const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: true },
-  { name: "Services", href: "#services", current: false },
-  { name: "About", href: "#about", current: false },
-  { name: "Project", href: "#project", current: false },
-  { name: "Help", href: "/", current: false },
+  { name: "Features", href: "/#features", current: false },
+  { name: "About", href: "/about-us", current: false },
+  { name: "Pricing", href: "/#pricing", current: false },
+  { name: "Contact", href: "/contact-us", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -33,7 +33,7 @@ const Data = () => {
                   item.current
                     ? "text-black hover:opacity-100"
                     : "hover:text-black hover:opacity-100",
-                  "px-2 py-1 text-lg font-normal opacity-75 block"
+                  "px-2 py-1 text-lg font-normal opacity-75 block",
                 )}
                 aria-current={item.current ? "page" : undefined}
               >

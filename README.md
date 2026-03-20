@@ -14,6 +14,17 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Environment Variables
+
+Create a `.env` file in the website project with these values for the contact form:
+
+```bash
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_turnstile_site_key
+```
+
+In production, point `NEXT_PUBLIC_API_BASE_URL` to your deployed API base URL.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
