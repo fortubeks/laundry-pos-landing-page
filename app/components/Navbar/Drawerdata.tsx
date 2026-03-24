@@ -11,7 +11,7 @@ const navigation: NavigationItem[] = [
   { name: "Home", href: "/", current: true },
   { name: "Features", href: "/#features", current: false },
   { name: "About", href: "/about-us", current: false },
-  { name: "Pricing", href: "/#pricing", current: false },
+  { name: "Pricing", href: "/pricing", current: false },
   { name: "Contact", href: "/contact-us", current: false },
 ];
 

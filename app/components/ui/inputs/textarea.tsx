@@ -11,7 +11,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, error, ...props }, ref) => {
     return (
       <textarea
-        className={`w-full rounded-3xl border border-gray-300 px-5 py-3 text-left text-sm text-gray-800 shadow-theme-xs resize-none placeholder:text-sm placeholder:text-gray-400 focus:border-primary-300 focus:outline-0 focus:ring-3 focus:ring-primary-300/20 ${
+        className={`w-full rounded-xl border border-gray-300 px-5 py-3 text-left text-sm text-gray-800 shadow-theme-xs resize-none placeholder:text-sm placeholder:text-gray-400 focus:border-primary-300 focus:outline-0 focus:ring-3 focus:ring-primary-300/20 ${
           error && "border-red-500 focus:border-red-500 focus:ring-red-500/20"
         }`}
         ref={ref}

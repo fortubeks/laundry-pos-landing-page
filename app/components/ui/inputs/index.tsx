@@ -3,8 +3,7 @@
 import { forwardRef, HTMLProps, useId, useState } from "react";
 import { Label } from "../label";
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: boolean;
 }
 
@@ -13,7 +12,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <input
         type={type || "text"}
-        className={`h-12 w-full rounded-full border border-gray-300 px-5 py-2.5 text-left text-sm text-gray-800 shadow-theme-xs
+        className={`h-12 w-full rounded-xl border border-gray-300 px-5 py-2.5 text-left text-sm text-gray-800 shadow-theme-xs
           placeholder:text-sm placeholder:text-gray-400 disabled:opacity-70
           focus:border-primary-300 focus:outline-0 focus:ring-3 focus:ring-primary-300/20
           ${
@@ -26,7 +25,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {...props}
       />
     );
-  }
+  },
 );
 
 Input.displayName = "Input";
