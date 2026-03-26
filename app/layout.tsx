@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/Footer";
 import Image from "next/image";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 export const metadata = {
   title: "My Laundry Point of Sale",
@@ -56,6 +57,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-10990925394"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'AW-10990925394');
+          `}
+        </Script>
+      </head>
       <body>
         <Navbar />
         {children}
