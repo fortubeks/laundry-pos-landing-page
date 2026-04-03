@@ -148,15 +148,11 @@ const footer = () => {
           </h4>
           <div className="flex gap-5 mt-5 lg:mt-0 justify-center lg:justify-start">
             <h4 className="text-offwhite text-sm font-normal">
-              <Link href="/" target="_blank">
-                Privacy policy
-              </Link>
+              <Link href="/privacy-policy">Privacy policy</Link>
             </h4>
             <div className="h-5 bg-bordertop w-0.5"></div>
             <h4 className="text-offwhite text-sm font-normal">
-              <Link href="/" target="_blank">
-                Terms & conditions
-              </Link>
+              <Link href="/terms-of-use">Terms & conditions</Link>
             </h4>
           </div>
         </div>
