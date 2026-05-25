@@ -1,9 +1,11 @@
 import "./globals.css";
+import { Suspense } from "react";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/Footer";
 import Image from "next/image";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";
+import GoogleAnalyticsPageTracker from "./components/GoogleAnalyticsPageTracker";
 
 export const metadata = {
   title: "My Laundry Point of Sale",
@@ -68,11 +70,14 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
             gtag('js', new Date());
-            gtag('config', 'G-FTY3Y5NX6V');
+            gtag('config', 'G-FTY3Y5NX6V', { send_page_view: false });
           `}
         </Script>
       </head>
       <body>
+        <Suspense fallback={null}>
+          <GoogleAnalyticsPageTracker />
+        </Suspense>
         <Navbar />
         {children}
         <Footer />
